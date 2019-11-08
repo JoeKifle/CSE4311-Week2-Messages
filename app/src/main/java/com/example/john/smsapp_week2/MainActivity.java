@@ -29,19 +29,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendSMS(View view){
 
+// Sending via SmsManager
 
-        /*
-             try{
                     SmsManager smgr = SmsManager.getDefault();
                     smgr.sendTextMessage(txtMobile.getText().toString(),null,txtMessage.getText().toString(),null,null);
                     Toast.makeText(MainActivity.this, "SMS Sent Successfully", Toast.LENGTH_SHORT).show();
-                }
-                catch (Exception e){
-                    Toast.makeText(MainActivity.this, "SMS Failed to Send, Please try again", Toast.LENGTH_SHORT).show();
-                }
-        */
 
-        try{
+
+// Sending via intent
+
+       /* try{
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse("smsto:"));
             i.setType("vnd.android-dir/mms-sms");
@@ -51,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch(Exception e){
             Toast.makeText(MainActivity.this, "SMS Failed to Send, Please try again", Toast.LENGTH_SHORT).show();
-        }
+        } */
 
     }
 }
